@@ -39,11 +39,11 @@ The following tools were used in this project:
   a linux based linux VPS like contabo is required in order to proceed with this guide.
 
   It is recommended to select ubuntu 20.04 due to its LTS nature for long term support. So proceed with select 20.04 even if the next guide says 22.04.
-  A contabo guide to purchasing a vps can be found by clicking [here](https://medium.com/@vkttech/abo-contabo-cloud-vps-a-step-by-step-guide-0b115e07bf74)
+  A contabo guide to purchasing a vps can be found by clicking [here](https://medium.com/@vkttech/abo-contabo-cloud-vps-a-step-by-step-guide-0b115e07bf74){:target="_blank"}
   
-  You will need to find yourself a client application to talkl to the VPS you have purchased such as putty. Guide to install and use putty [here](https://medium.com/@getstaked/how-to-connect-your-vps-via-ssh-by-using-putty-ac87c40999a5)
+  You will need to find yourself a client application to talkl to the VPS you have purchased such as putty. Guide to install and use putty [here](https://medium.com/@getstaked/how-to-connect-your-vps-via-ssh-by-using-putty-ac87c40999a5){:target="_blank"}
 
-  Once you have your VPS in place and connected using putty or any other client, you can proceed with connecting to your VPS by following this guide [here](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04) .
+  Once you have your VPS in place and connected using putty or any other client, you can proceed with connecting to your VPS by following this guide [here](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04){:target="_blank"} .
 
 
   docker and docker-compose is required to use this application
@@ -51,16 +51,16 @@ The following tools were used in this project:
 ### SAMPLE DOCKER|COMPOSE INSTALL GUIDES ###
 
 ### To install docker (ubuntu 18.04 example) ###
-[docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04)
+[docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04){:target="_blank"}
 
 ### To install docker-compose (ubuntu 18.04 example) ###
-[docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-18-04)
+[docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-18-04){:target="_blank"}
   OR
 ### To install docker (ubuntu 20.04 example) ###
-[docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
+[docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04){:target="_blank"}
 
 ### To install docker-compose (ubuntu 20.04 example) ###
-[docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-20-04)
+[docker-compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-20-04){:target="_blank"}
   
   Other requirements include basic knowledge of accessing to Ubuntu linux 18.04 or above and git. You may adapt this application to other linux systems but
   we will not be discussing them here. Windows and Mac Os is also not covered in this guide.
