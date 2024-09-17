@@ -36,6 +36,16 @@ The following tools were used in this project:
 - [Github](https://github.com)
 
 ## :white_check_mark: Requirements ##
+  a linux based linux VPS like contabo is required in order to proceed with this guide.
+
+  It is recommended to select ubuntu 20.04 due to its LTS nature for long term support. So proceed with select 20.04 even if the next guide says 22.04.
+  A contabo guide to purchasing a vps can be found by clicking [here](https://medium.com/@vkttech/abo-contabo-cloud-vps-a-step-by-step-guide-0b115e07bf74)
+  
+  You will need to find yourself a client application to talkl to the VPS you have purchased such as putty. Guide to install and use putty [here](https://medium.com/@getstaked/how-to-connect-your-vps-via-ssh-by-using-putty-ac87c40999a5)
+
+  Once you have your VPS in place and connected using putty or any other client, you can proceed with connecting to your VPS by following this guide [here](https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-20-04) .
+
+
   docker and docker-compose is required to use this application
 
 ### SAMPLE DOCKER|COMPOSE INSTALL GUIDES ###
@@ -87,10 +97,10 @@ nano .env
 
  sample edit:
 ```bash
-rpcuser="bob"
-rpcpassword="bobrpcpassword"
-domain="bobdomain.com"
-email="bobdomain@domain.com"
+rpcuser=bob
+rpcpassword=bobrpcpassword
+domain=bobdomain.com
+email=bobdomain@domain.com
 DAEMON_URL=http://bob:bobpassword123z@localhost:7332/
 SSL_CERTFILE=/etc/letsencrypt/live/bobdomain.com/fullchain.pem
 SSL_KEYFILE=/etc/letsencrypt/live/bobdomain.com/privkey.pem
@@ -100,6 +110,9 @@ SSL_KEYFILE=/etc/letsencrypt/live/bobdomain.com/privkey.pem
 
 
 ### Obtain a let's encrypto live SSL certificate via certbot ###
+
+(please note that if you have any network servers running like nginx, disable them now for e.g systemctl stop nginx. This script will require port 80 to be available
+so if you have failed once, you must delete the .certbot file generated after first use and then run the script again. this is very important. To remove .certbot file type: rm .certbot)
 
  Run the certbot 1st time and follow instructions on screen. 2nd times onward can be used at least once a day.
  SSL certificates normally expires 3months(90days) so it's good practices to rerun this command once every week or month or if you're proficient in 
@@ -113,7 +126,7 @@ bash run-certbot.sh
 
  Make a copy of nginx/conf/app.conf
 ```bash
-cp nginx/conf/app.conf.sample nginx/app.conf
+cp nginx/conf/app.conf.sample nginx/conf/app.conf
 ```
 
 ```bash

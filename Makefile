@@ -1,7 +1,7 @@
 
 # radiant node and electrumx set
 up:
-	docker-compose up
+	docker-compose up -d
 stop:
 	docker-compose stop
 build:
@@ -12,10 +12,13 @@ bash:
 	docker exec -it radiant-set bash
 getinfo:
 	docker exec -it radiant-set sh -c "radiant-cli -datadir=/root/.radiant -getinfo"
+# update: placeholder
+# add version settings to docker-compose set
+# make stop && make build
 
 # nginx web server
 nup:
-	docker-compose -f docker-compose-dual.yml up 
+	docker-compose -f docker-compose-dual.yml up -d
 nstop:
 	docker-compose -f docker-compose-dual.yml up stop
 nbuild:

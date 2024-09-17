@@ -82,19 +82,6 @@ WORKDIR /root/electrumx
 COPY .env .env
 RUN python3 -m pip install -r requirements.txt
 
-# ARG domain
-# ARG email
-# ARG rpcuser
-# ARG rpcpassword
-# ARG DAEMON_URL
-# ARG SSL_CERTFILE
-# ARG SSL_KEYFILE
-
-# ENV DAEMON_URL="http://$rpcuser:$rpcpassword@localhost:7332/"
-# ENV DAEMON_URL=${DAEMON_URL}
-# ENV rpcuser=$rpcuser
-# ENV rpcpassword=$rpcpassword
-# ENV DAEMON_URL=http://user123:rpcpassword123ABC@localhost:7333/
 ENV COIN=Radiant
 ENV NET=mainnet
 ENV REQUEST_TIMEOUT=60
@@ -111,44 +98,6 @@ ENV MAX_RECV=10000000
 
 ENV COST_SOFT_LIMIT=0
 ENV COST_HARD_LIMIT=0
-
-# ENV ENV_DOMAIN=${domain}
-# ENV SSL_CERTFILE=${SSL_CERTFILE}
-# ENV SSL_KEYFILE=${SSL_KEYFILE}
-# ENV SSL_CERTFILE=/data/radiantnode_electrumx/electrumdb/server.crt
-# ENV SSL_KEYFILE=/data/radiantnode_electrumx/electrumdb/server.key
-# ENV SSL_CERTFILE="/etc/letsencrypt/live/$domain/fullchain.pem"
-# ENV SSL_KEYFILE="/etc/letsencrypt/live/$domain/privkey.pem"
-
-
-# Create SSL
-# WORKDIR /root/electrumdb
-
-# ENV SSL_CERTFILE=/root/electrumdb/server.crt
-# ENV SSL_KEYFILE=/root/electrumdb/server.key
-
-# RUN mkdir -p /data
-# RUN printf "$DAEMON_URL"
-# RUN printf "$rpcuser"
-# RUN printf "$rpcpassword"
-# RUN printf "$SSL_CERTFILE"
-# RUN printf "$SSL_KEYFILE"
-
-# ARG domain
-# ARG env_domain_crt=letsencrypt/live/$domain/fullchain.pem
-# ARG env_domain_key=letsencrypt/live/$domain/privkey.pem
-
-# ENV env_domain $domain
-# RUN echo $domain
-
-# Lifehack
-# FROM env_domain_crt as crt
-# FROM env_domain_key as key
-# ARG fileVariableCrt=./letsencrypt/live/$domain/fullchain.pem
-# ARG fileVariableKey=./letsencrypt/live/$domain/privkey.pem
-
-# COPY ${fileVariableCrt} /data/radiantnode_electrumx/electrumdb/server.crt
-# COPY ${fileVariableKey} /data/radiantnode_electrumx/electrumdb/server.key
 
 WORKDIR /root/electrumx
 
